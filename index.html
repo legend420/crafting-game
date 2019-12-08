@@ -18,6 +18,15 @@
     <button  onclick="tap5()"> produci 1 piccone</button>
     <p id="quantita_picconi"> hai 0  picconi</p>
     <p>produrre 1  piccone costa 10 di ferro e 20 di legno </p>
+    <br>
+    <button  onclick="tap6()"> mina 1 di oro</button>
+    <p id="quantita_oro"> hai 0  di oro</p>
+    <p>minare 1  di oro costa 1 piccone</p>
+    <br>
+    <button  onclick="tap7()"> produci 1 piccone d'oro</button>
+    <p id="quantita_picconi_oro"> hai 0  picconi d'oro</p>
+    <p>produrre 1  piccone d'oro costa 10 di oro e 20 di legno </p>
+
 
 
 
@@ -58,6 +67,23 @@ function tap5() {
         picconi++
     }
     document.getElementById("quantita_picconi").textContent = "hai " + picconi + " picconi";
+}
+var oro = 0;
+function tap6() {
+    if (picconi >= 1 ) {
+        picconi = picconi - 1;
+        oro++
+    }
+    document.getElementById("quantita_oro").textContent = "hai " + oro + " di oro";
+}
+var picconi_oro = 0;
+function tap7() {
+    if (oro >= 10  && legno >= 20) {
+        oro = oro - 10;
+        legno = legno  - 10;
+        picconi_oro++
+    }
+    document.getElementById("quantita_picconi_oro").textContent = "hai " + picconi_oro + " picconi d'oro";
 }
     </script>
     
