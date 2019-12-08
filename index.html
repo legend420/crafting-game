@@ -1,4 +1,5 @@
-  <html>
+
+<html>
 </head>
 <body> 
    <button  onclick="tap1()"> produci 1 di legno </button>
@@ -11,6 +12,9 @@
     <button  onclick="tap4()"> produci 1 di ferro</button>
     <p id="quantita_ferro"> hai 0  di ferro</p>
     <p>produrre 1 di ferro costa 5 di carbone e 10 di pietra </p>
+    <button  onclick="tap5()"> produci 1 piccone</button>
+    <p id="quantita_picconi"> hai 0  picconi</p>
+    <p>produrre 1  piccone costa 10 di ferro e 20 di legno </p>
 
 
 
@@ -42,6 +46,15 @@ function tap4() {
         ferro++
     }
     document.getElementById("quantita_ferro").textContent = "hai " + ferro + "  di ferro";
+}
+var picconi = 0;
+function tap5() {
+    if (ferro >= 10  && legno >= 20) {
+        ferro = ferro - 10;
+        legno = legno  - 10;
+        picconi++
+    }
+    document.getElementById("quantita_picconi").textContent = "hai " + picconi + " picconi";
 }
     </script>
     
