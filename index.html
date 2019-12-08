@@ -1,35 +1,36 @@
+
 <html>
 </head>
 <body> 
-   <button  onclick="tap1()"> produci 1 di legno </button>
-    <p id="quantita_legno"> hai 0 di legno</p>
+   <button  onclick="tap1()"> make 1 wood </button>
+    <p id="quantita_legno"> you have 0 wood</p>
     <br>
-    <button  onclick="tap2()"> produci 1 di pietra </button>
-    <p id="quantita_pietra"> hai 0  di pietra</p>
+    <button  onclick="tap2()"> make 1 stone </button>
+    <p id="quantita_pietra"> you have 0 stone</p>
     <br>
-    <button  onclick="tap3()"> produci 1 di carbone</button>
-    <p id="quantita_carbone"> hai 0  di carbone</p>
-    <p>produrre 1 di carbone costa 5 di legno </p>
+    <button  onclick="tap3()"> make 1 coal</button>
+    <p id="quantita_carbone"> you have 0 coal</p>
+    <p>making  1 coal costs 5 wood </p>
     <br>
-    <button  onclick="tap4()"> produci 1 di ferro</button>
-    <p id="quantita_ferro"> hai 0  di ferro</p>
-    <p>produrre 1 di ferro costa 5 di carbone e 10 di pietra </p>
+    <button  onclick="tap4()"> make 1 iron</button>
+    <p id="quantita_ferro"> you have 0 iron</p>
+    <p>making 1 iron costs 5 coal and 10 stone </p>
     <br>
-    <button  onclick="tap5()"> produci 1 piccone</button>
-    <p id="quantita_picconi"> hai 0  picconi</p>
-    <p>produrre 1  piccone costa 10 di ferro e 20 di legno </p>
+    <button  onclick="tap5()"> craft 1 pickaxe</button>
+    <p id="quantita_picconi"> you have 0  pickaxes</p>
+    <p>crafting  1  pickaxe costs 10 iron and 20 wood </p>
     <br>
-    <button  onclick="tap6()"> mina 1 di oro</button>
-    <p id="quantita_oro"> hai 0  di oro</p>
-    <p>minare 1  di oro costa 1 piccone</p>
+    <button  onclick="tap6()"> mine 1 gold</button>
+    <p id="quantita_oro"> you have 0 gold</p>
+    <p>mining 1 gold costs 1 pickaxe</p>
     <br>
-    <button  onclick="tap7()"> produci 1 piccone d'oro</button>
-    <p id="quantita_picconi_oro"> hai 0  picconi d'oro</p>
-    <p>produrre 1  piccone d'oro costa 10 di oro e 20 di legno </p>
+    <button  onclick="tap7()"> craft 1 golden pickaxe</button>
+    <p id="quantita_picconi_oro"> you have 0 golden pickaxes</p>
+    <p>crafting 1 golden pickaxe costs 10 gold and 20 wood </p>
     <br>
-    <button  onclick="tap8()"> mina 1 diamante</button>
-    <p id="quantita_diamanti"> hai 0  diamanti</p>
-    <p>minare 1 diamante costa 1 piccone d'oro</p>
+    <button  onclick="tap8()"> mine 1 diamond</button>
+    <p id="quantita_diamanti"> you have 0 diamonds</p>
+    <p>mining 1 diamond costs 1 golden pickaxe</p>
 
 
 
@@ -39,12 +40,12 @@
     var legno = 0;
 function tap1() {
     legno++;
-    document.getElementById("quantita_legno").textContent = "hai " + legno + " di legno";
+    document.getElementById("quantita_legno").textContent = "you have " + legno + " wood";
 }
 var pietra = 0;
 function tap2() {
     pietra++;
-    document.getElementById("quantita_pietra").textContent = "hai " + pietra + " di pietra";
+    document.getElementById("quantita_pietra").textContent = "you have " + pietra + " stone";
 }
 var carbone = 0;
 function tap3() {
@@ -52,7 +53,7 @@ function tap3() {
         legno = legno - 5;
         carbone++
     }
-    document.getElementById("quantita_carbone").textContent = "hai " + carbone + "  di carbone";
+    document.getElementById("quantita_carbone").textContent = "you have " + carbone + "  coal";
 }
 var ferro = 0;
 function tap4() {
@@ -61,7 +62,7 @@ function tap4() {
         pietra = pietra  - 10;
         ferro++
     }
-    document.getElementById("quantita_ferro").textContent = "hai " + ferro + "  di ferro";
+    document.getElementById("quantita_ferro").textContent = "you have " + ferro + "  iron";
 }
 var picconi = 0;
 function tap5() {
@@ -70,7 +71,7 @@ function tap5() {
         legno = legno  - 10;
         picconi++
     }
-    document.getElementById("quantita_picconi").textContent = "hai " + picconi + " picconi";
+    document.getElementById("quantita_picconi").textContent = "you have " + picconi + " pickaxes";
 }
 var oro = 0;
 function tap6() {
@@ -78,7 +79,7 @@ function tap6() {
         picconi = picconi - 1;
         oro++
     }
-    document.getElementById("quantita_oro").textContent = "hai " + oro + " di oro";
+    document.getElementById("quantita_oro").textContent = "you have " + oro + " gold";
 }
 var picconi_oro = 0;
 function tap7() {
@@ -87,7 +88,7 @@ function tap7() {
         legno = legno  - 10;
         picconi_oro++
     }
-    document.getElementById("quantita_picconi_oro").textContent = "hai " + picconi_oro + " picconi d'oro";
+    document.getElementById("quantita_picconi_oro").textContent = "you have " + picconi_oro + " golden pickaxes";
 }
 var diamanti = 0;
 function tap7() {
@@ -95,7 +96,7 @@ function tap7() {
         picconi_oro = picconi_oro - 10;
         diamanti++
     }
-    document.getElementById("quantita_diamanti").textContent = "hai " + diamanti + " diamanti";
+    document.getElementById("quantita_diamanti").textContent = "you have " + diamanti + " diamonds";
 }
     </script>
     
