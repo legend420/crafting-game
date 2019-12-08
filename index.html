@@ -1,0 +1,49 @@
+  <html>
+</head>
+<body> 
+   <button  onclick="tap1()"> produci 1 di legno </button>
+    <p id="quantita_legno"> hai 0 di legno</p>
+    <button  onclick="tap2()"> produci 1 di pietra </button>
+    <p id="quantita_pietra"> hai 0  di pietra</p>
+    <button  onclick="tap3()"> produci 1 di carbone</button>
+    <p id="quantita_carbone"> hai 0  di carbone</p>
+    <p>produrre 1 di carbone costa 5 di legno </p>
+    <button  onclick="tap4()"> produci 1 di ferro</button>
+    <p id="quantita_ferro"> hai 0  di ferro</p>
+    <p>produrre 1 di ferro costa 5 di carbone e 10 di pietra </p>
+
+
+
+
+    <script>
+    var legno = 0;
+function tap1() {
+    legno++;
+    document.getElementById("quantita_legno").textContent = "hai " + legno + " di legno";
+}
+var pietra = 0;
+function tap2() {
+    pietra++;
+    document.getElementById("quantita_pietra").textContent = "hai " + pietra + " di pietra";
+}
+var carbone = 0;
+function tap3() {
+    if (legno >= 5 ) {
+        legno = legno - 5;
+        carbone++
+    }
+    document.getElementById("quantita_carbone").textContent = "hai " + carbone + "  di carbone";
+}
+var ferro = 0;
+function tap4() {
+    if (carbone >= 5  && pietra >= 10) {
+        carbone = carbone - 5;
+        pietra = pietra  - 10;
+        ferro++
+    }
+    document.getElementById("quantita_ferro").textContent = "hai " + ferro + "  di ferro";
+}
+    </script>
+    
+</body>
+</html>
